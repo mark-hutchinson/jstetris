@@ -1,0 +1,11 @@
+
+var levels :=[
+	{
+		"minLines":0,
+		"scoreMultiplier":1
+	},
+	{
+		"minLines":10,
+		"scoreMultiplier":1.5
+	}
+]

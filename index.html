@@ -1,0 +1,78 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JSTetris</title>
+	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript" src="tetris.js"></script>
+
+	<link rel="stylesheet" href="ext/keyboard.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+</head>
+
+<!-- TODO
+	- make work on mobile
+-->
+<body onload="start()">
+	<div id="game">
+		<h1>JSTetris</h1>
+		<div id="leftCol">
+			<h2>Keyboard Controls</h2>
+			<ul>
+				<li><kbd class="light">W</kbd> Rotate </li>
+				<li><kbd class="light">A</kbd> Left </li>
+				<li><kbd class="light">S</kbd> Down </li>
+				<li><kbd class="light">D</kbd> Right </li>
+			</ul>
+			<h2>Swipe Controls</h2>
+			<ul>
+				<li><kbd class="light">↑</kbd> Rotate </li>
+				<li><kbd class="light">←</kbd> Left </li>
+				<li><kbd class="light">↓</kbd> Down </li>
+				<li><kbd class="light">→</kbd> Right </li>
+			</ul>
+		</div>
+
+		<div id="centerCol">
+			<canvas width="300" height="600" id="gameCanvas" ></canvas>
+		</div>
+		<div id="rightCol">
+			<div id="scoreCell">
+				<h1 id="lines">0</h1>
+				<h2>Lines</h2>
+			</div>
+			<div id="scoreCell">
+				<h1 id="score">0</h1>
+				<h2>Score</h2>
+			</div>
+			<div id="scoreCell">
+				<h1 id="level">1</h1>
+				<h2>Level</h2>
+			</div>
+
+			<div id="upNextCell">
+				<h2>Up Next</h2>
+				<canvas width="120" height="120" id="upNextCanvas" ></canvas>
+			</div>
+
+			<button onclick="tetris.reset()">Restart</button>
+			<button onclick="tetris.togglePaused()" id="pauseButton">Pause</button>
+		</div>
+	</div>
+
+</body>
+</html>
